@@ -1,11 +1,15 @@
 Feature: Create New Client - Simple Practice Assessment
 
-  Background:
+#  Background:
+#    Given I open the web browser
+#    When  I open simple practice website
+# NOTE: background only work on first scenario
+
+
+  @smoke @regression
+  Scenario Outline: Create new client on the simplepractice website
     Given I open the web browser
     When  I open simple practice website
-
-  @smoke @regression @test
-  Scenario Outline: Create new client on the simplepractice website
     And   I type <email> on the email input
     And   I type <password> on the password input
     And   I click on the sign in button
@@ -19,6 +23,7 @@ Feature: Create New Client - Simple Practice Assessment
     And   I click on the clients button
     And   I type <search_client> on the search input
     Then  I validate that the client is displayed correctly
+    And   I quit driver
 
     Examples:
       | email                  | password    | first_name | last_name | search_client |

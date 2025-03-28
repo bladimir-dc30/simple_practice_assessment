@@ -64,3 +64,10 @@ class LoginPage:
         except Exception as e:
             raise Exception(f"Simple Practice Home - required error messages not displayed. --> {e}")
 
+    def quit_driver(self):
+        try:
+            self.driver.quit()
+        except Exception as e:
+            raise Exception(f"Commons - driver not quit. --> {e}")
+
+
