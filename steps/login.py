@@ -49,3 +49,9 @@ def step_impl(context):
 def step_impl(context):
     login_page = LoginPage(context.driver)
     login_page.verify_required_error_messages_are_displayed()
+
+@then('I quit driver')
+def step_impl(context):
+    login_page = LoginPage(context.driver)
+    login_page.quit_driver()
+
