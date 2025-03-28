@@ -3,7 +3,7 @@ Feature: Login SimplePractice Webpage
 #  Background:
 #    Given I open the web browser
 #    When  I open simple practice website
-# NOTE: background only work on first scenario
+# NOTE: background only works on first scenario
 
   @smoke @regression
   Scenario Outline: Login into the webpage with valid credentials
