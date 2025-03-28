@@ -6,6 +6,7 @@ from selenium import webdriver
 @given('I open the web browser')
 def step_impl(context):
     context.driver = webdriver.Chrome()
+    context.driver.maximize_window()
 
 
 @when('I open simple practice website')
