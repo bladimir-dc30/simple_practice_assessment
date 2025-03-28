@@ -56,6 +56,51 @@ def step_impl(context):
     new_client.assert_new_client_displayed()
 
 
+@then('I validat that the last name error message is displayed correctly')
+def step_impl(context):
+    new_client = NewClient(context.driver)
+    new_client.assert_last_name_error_msg()
 
+
+@then('I validat that the first name error message is displayed correctly')
+def step_impl(context):
+    new_client = NewClient(context.driver)
+    new_client.assert_first_name_error_msg()
+
+
+@then('I type {nickname} on the nickname input')
+def step_impl(context, nickname):
+    new_client = NewClient(context.driver)
+    new_client.input_nick_name(nickname)
+
+
+@then(u'I select {month} on the month input')
+def step_impl(context, month):
+    new_client = NewClient(context.driver)
+    new_client.input_month(month)
+
+
+@then(u'I select {day} on the day input')
+def step_impl(context, day):
+    new_client = NewClient(context.driver)
+    new_client.input_day(day)
+
+
+@then(u'I select {year} on the year input')
+def step_impl(context, year):
+    new_client = NewClient(context.driver)
+    new_client.input_year(year)
+
+
+@then('I type {add_email} on the add email input')
+def step_impl(context, add_email):
+    new_client = NewClient(context.driver)
+    new_client.input_add_email(add_email)
+
+
+@then(u'I type {add_phone} on the add phone input')
+def step_impl(context, add_phone):
+    new_client = NewClient(context.driver)
+    new_client.input_add_phone(add_phone)
 
 
